@@ -7,7 +7,7 @@ This repository includes a `pybind11`-based Python extension for qpOASES in `qpo
 1. From this top-level repository directory (the one containing `Makefile`), build qpOASES:
 
 ```bash
-make
+make src
 ```
 
 2. Create and activate a Python virtual environment (recommended):
