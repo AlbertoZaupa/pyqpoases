@@ -1,1 +1,9 @@
 /*.mex
+*.o
+*.a
+*.so
+__pycache__
+__pycache__/*
+build
+bin/*
+qpoases.py/figures/*
