@@ -13,8 +13,8 @@ if _system not in _SYSTEM_TO_OS:
 
 OS = _SYSTEM_TO_OS[_system]
 
-path2qpoases = "../"
-_qpoases_root = Path(path2qpoases)
+_qpoases_root = Path(__file__).resolve().parent.parent
+path2qpoases = str(_qpoases_root) + "/"
 
 library_dirs = [str(_qpoases_root / "bin")]
 

@@ -1,6 +1,6 @@
 # Python Usage (`pyqpoases`)
 
-This repository includes a `pybind11`-based Python extension for qpOASES in `qpoases.py/`.
+This repository includes a `pybind11`-based Python extension for [qpOASES](https://github.com/coin-or/qpOASES) in `qpoases.py/`.
 
 ## Installation
 
@@ -13,22 +13,26 @@ make src
 2. Create and activate a Python virtual environment (recommended):
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 ```
 
 3. Install Python dependencies:
 
 ```bash
-pip install -r qpoases.py/requirements.txt
+python -m pip install -r qpoases.py/requirements.txt
 ```
 
-4. Build and install the Python extension:
+4. From the top-level repository directory, build the Python extension:
 
 ```bash
-cd qpoases.py
-python setup.py build_ext --install
+python qpoases.py/setup.py build_ext
+export PYTHONPATH="$PWD/bin:$PYTHONPATH"
 ```
+
+The extension is placed in `bin/`, alongside `libqpOASES.so`. This makes it
+available to Python through `PYTHONPATH`; it does not install it into the virtual
+environment. Repeat the `export` command from the repository root in each new shell.
 
 ## Running Examples
 
