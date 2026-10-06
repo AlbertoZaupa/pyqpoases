@@ -1,4 +1,4 @@
-# Python Usage (`pyqpoases`)
+# A Python interface for qpOASES
 
 This repository includes a `pybind11`-based Python extension for [qpOASES](https://github.com/coin-or/qpOASES) in `qpoases.py/`.
 
